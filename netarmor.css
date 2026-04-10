@@ -1,0 +1,248 @@
+/* =========================================
+   NETARMOR SRL - Stylesheet Ufficiale
+   ========================================= */
+
+/* Variabili di Colore */
+:root {
+    --bg-dark: #0b0f19;
+    --bg-card: #161b2a;
+    --accent: #00d4ff;
+    --text-main: #e0e6ed;
+    --text-dim: #94a3b8;
+}
+
+/* Base e Reset */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Navigazione e Header */
+header {
+    background: rgba(11, 15, 25, 0.95);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    padding: 10px 5%; /* Padding ridotto per ospitare meglio il logo */
+    position: fixed;
+    top: 0; 
+    width: 90%; /* Occupa il 90% per lasciare spazio ai bordi se desiderato, o metti 100% e left 0 */
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Gestione Logo Immagine */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;       /* Altezza fissa per mantenere l'header pulito */
+    width: auto;        /* Mantiene le proporzioni del tuo file logo.png */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
+}
+
+/* Stile per il testo accanto al logo */
+.logo-text {
+    margin-left: 15px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* Assicura che i pulsanti nella sezione brochure vadano bene su mobile */
+@media (max-width: 600px) {
+    #brochure div {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover { 
+    color: var(--accent); 
+}
+
+/* Hero Section */
+.hero {
+    padding: 180px 10% 100px;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+}
+
+.hero h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 20px; 
+    color: #fff; 
+}
+
+.hero p { 
+    font-size: 1.2rem; 
+    color: var(--text-dim); 
+    max-width: 700px; 
+    margin: 0 auto 40px; 
+}
+
+/* Pulsanti */
+.btn {
+    background: var(--accent);
+    color: var(--bg-dark);
+    padding: 16px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid var(--accent);
+}
+
+.btn:hover { 
+    background: transparent; 
+    color: var(--accent); 
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--accent);
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: var(--bg-dark);
+}
+
+/* Layout Sezioni */
+section { 
+    padding: 100px 10%; 
+}
+
+h2 { 
+    font-size: 2.2rem; 
+    text-align: center; 
+    margin-bottom: 60px; 
+    color: var(--accent); 
+    text-transform: uppercase; 
+}
+
+.bg-alt { 
+    background: rgba(255, 255, 255, 0.02); 
+}
+
+/* Griglie e Card */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 { 
+    margin-top: 0; 
+    color: #fff; 
+    font-size: 1.4rem; 
+}
+
+.service-card p { 
+    color: var(--text-dim); 
+    margin-bottom: 0; 
+}
+
+/* Sezione Valore / Metodo */
+.info-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Sezione Clienti */
+.client-type {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.client-type:hover {
+    background: rgba(0, 212, 255, 0.05);
+}
+
+/* Contatti */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    padding: 50px 10%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-dim);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .hero h1 { 
+        font-size: 2.5rem; 
+    }
+    
+    header { 
+        flex-direction: column; 
+        height: auto; 
+        padding: 20px; 
+    }
+    
+    .logo-img {
+        height: 40px; /* Logo leggermente più piccolo su mobile */
+    }
+
+    nav { 
+        margin-top: 15px; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav a { 
+        margin: 5px 10px; 
+    }
+}
