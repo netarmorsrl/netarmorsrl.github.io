@@ -219,6 +219,38 @@ footer {
     color: var(--text-dim);
 }
 
+/* Stile per l'Audio Player */
+.audio-container {
+    margin: 20px auto 40px;
+    background: rgba(22, 27, 42, 0.6);
+    padding: 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.audio-label {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+audio {
+    height: 35px;
+    filter: invert(100%) hue-rotate(180deg) brightness(1.5); /* Adatta i colori del player al tema dark */
+}
+
+/* Modifica al pulsante hero per distanziarlo dall'audio */
+.hero .btn {
+    margin-top: 10px;
+}
+
 /* Responsive - Mobile */
 @media (max-width: 768px) {
     .hero h1 { 
