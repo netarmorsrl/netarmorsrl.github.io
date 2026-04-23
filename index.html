@@ -133,9 +133,11 @@
                 
                 <button type="button" class="btn" onclick="sendMail()">Invia Richiesta</button>
 
-                <div id="fallbackMessage" style="display:none; margin-top: 20px; padding: 15px; border: 1px dashed var(--accent); border-radius: 8px; font-size: 0.9rem; background: rgba(0,0,0,0.3);">
-                    <p>Se l'app di posta non si è aperta automaticamente, scrivi direttamente a:</p>
-                    <strong style="color:var(--accent); word-break: break-all;">michele.dipace@iissdelloliocosmai.edu.it</strong>
+                <div id="fallbackMessage" style="display:none; margin-top: 20px; padding: 15px; border: 1px dashed var(--accent); border-radius: 8px; font-size: 0.9rem; background: rgba(0,0,0,0.3); text-align: center;">
+                    <p id="copyStatus">L'app di posta non si è aperta automaticamente?</p>
+                    <p>Scrivi direttamente a:<br>
+                    <strong style="color:var(--accent); font-size: 1.1rem;">michele.dipace@iissdelloliocosmai.edu.it</strong></p>
+                    <small>(Email copiata negli appunti!)</small>
                 </div>
             </div>
         </div>
@@ -157,20 +159,17 @@
                 return;
             }
 
-            // Prepariamo i dati per l'URL mailto
+            // Copia automatica dell'email negli appunti (piano B immediato)
+            navigator.clipboard.writeText(targetEmail);
+
             const emailSubject = encodeURIComponent("Richiesta NetArmor: " + subject);
             const emailBody = encodeURIComponent("Mittente: " + name + "\n\nMessaggio:\n" + message);
             
-            // Creiamo il link mailto
-            const mailtoUrl = `mailto:${targetEmail}?subject=${emailSubject}&body=${emailBody}`;
+            // Prova ad aprire il mailto
+            window.location.href = `mailto:${targetEmail}?subject=${emailSubject}&body=${emailBody}`;
 
-            // Eseguiamo l'apertura
-            window.location.href = mailtoUrl;
-
-            // Mostriamo il box di emergenza dopo 1 secondo come supporto extra
-            setTimeout(() => {
-                document.getElementById('fallbackMessage').style.display = 'block';
-            }, 1000);
+            // Mostra il box di aiuto dopo un istante
+            document.getElementById('fallbackMessage').style.display = 'block';
         }
     </script>
 
