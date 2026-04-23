@@ -217,3 +217,74 @@ footer {
     nav a { margin: 5px 10px; }
     #brochure div { flex-direction: column; align-items: center; }
 }
+
+/* --- Stile Spot Video --- */
+.video-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(22, 27, 42, 0.4);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.video-title {
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.video-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+}
+
+/* --- Stile Form di Contatto --- */
+.contact-form {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    margin: 40px auto;
+    max-width: 550px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--bg-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.contact-form button {
+    width: 100%;
+    cursor: pointer;
+}
