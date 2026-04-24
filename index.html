@@ -24,7 +24,7 @@
 
     <section class="hero">
         <h1>Sicurezza Digitale per l&apos;Impresa Moderna</h1>
-        <p>Garantiamo protezione informatica su misura con monitoraggio 24/7 e tecnologie di difesa proattiva.</p>
+        <p>Garantiamo protezione informatica su misura con monitoraggio 24/7 e tecnologie di difesa proattiva per assicurare la tua continuità operativa.</p>
         
         <div class="audio-container">
             <span class="audio-label">Ascolta la nostra presentazione:</span>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="hero-action">
-            <a href="#contatti" class="btn">Inizia ora</a>
+            <a href="#contatti" class="btn">Richiedi un'analisi</a>
         </div>
     </section>
 
@@ -56,30 +56,30 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>Monitoraggio SOC 24/7</h3>
-                <p>Analisi costante delle infrastrutture per il blocco delle minacce e gestione incidenti.</p>
+                <p>Analisi costante delle infrastrutture per il blocco delle minacce e gestione proattiva degli incidenti critici.</p>
             </div>
             <div class="service-card">
                 <h3>Vulnerability Assessment</h3>
-                <p>Identificazione preventiva dei punti deboli del sistema con reportistica periodica.</p>
+                <p>Identificazione preventiva dei punti deboli del sistema con reportistica periodica dettagliata e piani di rientro.</p>
             </div>
             <div class="service-card">
                 <h3>GDPR &amp; Compliance</h3>
-                <p>Supporto consulenziale e gestione della conformità legale con esperti DPO.</p>
+                <p>Supporto consulenziale e gestione della conformità legale in collaborazione con i migliori esperti DPO.</p>
             </div>
             <div class="service-card">
                 <h3>Ripristino Post-Incidente</h3>
-                <p>Garanzia di ripristino e bonifica dei sistemi per tornare operativi senza perdite.</p>
+                <p>Garanzia di ripristino e bonifica dei sistemi post-attacco per tornare operativi senza perdite di dati sensibili.</p>
             </div>
         </div>
     </section>
 
     <section id="brochure" class="bg-alt">
         <div style="text-align: center; max-width: 900px; margin: 0 auto;">
-            <h2>Risorse Strategiche</h2>
-            <p>Scarica il nostro Business Model Canvas e la brochure informativa.</p>
+            <h2>Risorse e Trasparenza</h2>
+            <p>Approfondisci la nostra strategia aziendale attraverso il Business Model Canvas e la brochure tecnica.</p>
             <div style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                <a href="brochure.pdf" target="_blank" class="btn btn-outline">Brochure PDF</a>
-                <a href="business.pdf" target="_blank" class="btn btn-outline">Business Model</a>
+                <a href="brochure.pdf" target="_blank" class="btn btn-outline">Scarica Brochure PDF</a>
+                <a href="business.pdf" target="_blank" class="btn btn-outline">Business Model Canvas</a>
             </div>
         </div>
     </section>
@@ -87,8 +87,8 @@
     <section id="metodo">
         <h2>Il Nostro Valore</h2>
         <div class="info-box">
-            <p>NetArmor Srl punta sul <strong>personale tecnico specializzato</strong> per garantire l'efficacia di ogni difesa.</p>
-            <p>Collaboriamo con i principali <strong>Vendor internazionali</strong> e infrastrutture <strong>Cloud</strong> all'avanguardia.</p>
+            <p>L'asset principale di <strong>NetArmor Srl</strong> è il personale tecnico specializzato: analisti SOC, sistemisti ed ingegneri pronti a intervenire.</p>
+            <p>Utilizziamo infrastrutture <strong>Cloud e Data Center</strong> certificate per garantire una resilienza totale ai nostri clienti.</p>
         </div>
     </section>
 
@@ -97,80 +97,100 @@
         <div class="services-grid">
             <div class="client-type">
                 <h4>PMI &amp; Grandi Imprese</h4>
-                <p>Protezione di reti aziendali e sistemi complessi.</p>
+                <p>Protezione di reti aziendali complesse e sistemi gestionali ERP.</p>
             </div>
             <div class="client-type">
-                <h4>Enti Pubblici &amp; Edilizia</h4>
-                <p>Sicurezza specifica per archivi digitali e infrastrutture critiche.</p>
+                <h4>Enti Pubblici</h4>
+                <p>Sicurezza specifica per la Pubblica Amministrazione e archivi digitali.</p>
             </div>
             <div class="client-type">
-                <h4>Professionisti</h4>
-                <p>Soluzioni su misura per studi legali e consulenti (B2B).</p>
+                <h4>Studi Professionali</h4>
+                <p>Soluzioni verticali per avvocati, commercialisti e consulenti del lavoro.</p>
             </div>
         </div>
     </section>
 
     <section id="contatti">
-        <h2>Contattaci</h2>
+        <h2>Richiedi Consulenza</h2>
         <div class="contact-container">
-            <p>Compila i campi e clicca "Invia" per preparare la mail indirizzata a Michele Di Pace.</p>
+            <p style="text-align: center; margin-bottom: 30px;">Invia un messaggio diretto al team tecnico di Michele Di Pace.</p>
             
-            <div class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
+                
+                <input type="hidden" name="access_key" value="3b4131fb-f248-4ec9-8f28-794300a12faa">
+                <input type="hidden" name="from_name" value="NetArmor Web Portal">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                 <div class="form-group">
-                    <input type="text" id="userName" placeholder="Nome / Azienda" required>
+                    <input type="text" name="name" placeholder="Nome Azienda o Referente" required>
                 </div>
                 <div class="form-group">
-                    <select id="userSubj">
-                        <option value="Monitoraggio SOC 24/7">Monitoraggio SOC 24/7</option>
-                        <option value="Vulnerability Assessment">Vulnerability Assessment</option>
-                        <option value="GDPR & Compliance">GDPR & Compliance</option>
-                        <option value="Informazioni Generali">Altro / Informazioni</option>
+                    <input type="email" name="email" placeholder="Email per la risposta" required>
+                </div>
+                <div class="form-group">
+                    <select name="service_interest">
+                        <option value="Monitoraggio SOC">Monitoraggio SOC 24/7</option>
+                        <option value="Assessment">Vulnerability Assessment</option>
+                        <option value="Compliance">GDPR & Compliance</option>
+                        <option value="Altro">Altro / Informazioni</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea id="userMsg" rows="4" placeholder="Come possiamo aiutarti?" required></textarea>
+                    <textarea name="message" rows="5" placeholder="Descrivi le tue esigenze di sicurezza..." required></textarea>
                 </div>
-                
-                <button type="button" class="btn" onclick="sendMail()">Invia Richiesta</button>
 
-                <div id="fallbackMessage" style="display:none; margin-top: 20px; padding: 15px; border: 1px dashed var(--accent); border-radius: 8px; font-size: 0.9rem; background: rgba(0,0,0,0.3); text-align: center;">
-                    <p id="copyStatus">L'app di posta non si è aperta automaticamente?</p>
-                    <p>Scrivi direttamente a:<br>
-                    <strong style="color:var(--accent); font-size: 1.1rem;">michele.dipace@iissdelloliocosmai.edu.it</strong></p>
-                    <small>(Email copiata negli appunti!)</small>
-                </div>
-            </div>
+                <button type="submit" id="submitBtn" class="btn">Invia Richiesta</button>
+                <div id="formStatus" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 NetArmor Srl. Protezione proattiva per il business.</p>
+        <p>&copy; 2026 NetArmor Srl. Via della Sicurezza Informatica. <br> Michele Di Pace - Responsabile Tecnico.</p>
     </footer>
 
     <script>
-        function sendMail() {
-            const name = document.getElementById('userName').value;
-            const subject = document.getElementById('userSubj').value;
-            const message = document.getElementById('userMsg').value;
-            const targetEmail = "michele.dipace@iissdelloliocosmai.edu.it";
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        const btn = document.getElementById('submitBtn');
 
-            if(!name || !message) {
-                alert("Per favore, compila tutti i campi prima di inviare.");
-                return;
-            }
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            btn.disabled = true;
+            status.innerHTML = "Invio in corso...";
+            status.style.color = "var(--accent)";
 
-            // Copia automatica dell'email negli appunti (piano B immediato)
-            navigator.clipboard.writeText(targetEmail);
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
 
-            const emailSubject = encodeURIComponent("Richiesta NetArmor: " + subject);
-            const emailBody = encodeURIComponent("Mittente: " + name + "\n\nMessaggio:\n" + message);
-            
-            // Prova ad aprire il mailto
-            window.location.href = `mailto:${targetEmail}?subject=${emailSubject}&body=${emailBody}`;
-
-            // Mostra il box di aiuto dopo un istante
-            document.getElementById('fallbackMessage').style.display = 'block';
-        }
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let res = await response.json();
+                if (response.status == 200) {
+                    status.innerHTML = "Grazie! Richiesta inviata con successo.";
+                    status.style.color = "#00ff88";
+                    form.reset();
+                } else {
+                    status.innerHTML = "Errore: " + res.message;
+                    status.style.color = "#ff4444";
+                }
+            })
+            .catch(error => {
+                status.innerHTML = "Errore di connessione. Riprova più tardi.";
+                status.style.color = "#ff4444";
+            })
+            .finally(() => {
+                btn.disabled = false;
+            });
+        });
     </script>
 
 </body>
