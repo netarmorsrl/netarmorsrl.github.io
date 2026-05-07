@@ -209,6 +209,32 @@
             });
         });
     </script>
+    
+<div id="social-popup" class="social-popup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopup()">&times;</button>
+            <div class="popup-icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="popup-text">
+                <p>Seguici su <strong>Instagram</strong>!</p>
+                <span>E' il nostro canale piu' attivo.</span>
+            </div>
+            <a href="https://www.instagram.com/netarmor_srl" target="_blank" class="popup-btn">Vai al profilo</a>
+        </div>
+    </div>
 
+    <script>
+        // Mostra il popup dopo 3 secondi
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('social-popup').classList.add('show');
+            }, 3000);
+        };
+
+        function closePopup() {
+            document.getElementById('social-popup').classList.remove('show');
+        }
+    </script>
 </body>
 </html>

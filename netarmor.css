@@ -333,3 +333,89 @@ footer {
     width: 100%;
     cursor: pointer;
 }
+
+/* --- Popup Instagram --- */
+.social-popup {
+    position: fixed;
+    bottom: -150px; /* Nascosto inizialmente */
+    left: 20px;
+    z-index: 9999;
+    background: rgba(22, 27, 42, 0.95);
+    border: 1px solid var(--accent);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-popup.show {
+    bottom: 20px; /* Entra in scena */
+}
+
+.popup-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.close-popup {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-popup:hover { color: #ff4444; }
+
+.popup-icon i {
+    font-size: 35px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.popup-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.popup-text span {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+.popup-btn {
+    width: 100%;
+    text-align: center;
+    background: var(--accent);
+    color: var(--bg-dark);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.popup-btn:hover {
+    background: #fff;
+    transform: scale(1.02);
+}
+
+/* Adattamento Mobile */
+@media (max-width: 480px) {
+    .social-popup {
+        width: calc(100% - 40px);
+        left: 20px;
+    }
+}
