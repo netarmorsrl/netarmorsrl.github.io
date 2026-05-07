@@ -112,38 +112,45 @@
     </section>
 
     <section id="contatti">
-        <h2>Richiedi Consulenza</h2>
-        <div class="contact-container">
-            <p style="text-align: center; margin-bottom: 30px;">Invia un messaggio diretto al team tecnico.</p>
-            
-            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
-                <input type="hidden" name="access_key" value="714d09d5-27f2-4f94-a280-f56f8b415457">
-                <input type="hidden" name="from_name" value="NetArmor Web Portal">
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Nome Azienda o Referente" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email per la risposta" required>
-                </div>
-                <div class="form-group">
-                    <select name="service_interest">
-                        <option value="Monitoraggio SOC">Monitoraggio SOC 24/7</option>
-                        <option value="Assessment">Vulnerability Assessment</option>
-                        <option value="Compliance">GDPR & Compliance</option>
-                        <option value="Altro">Altro / Informazioni</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" rows="5" placeholder="Descrivi le tue esigenze di sicurezza..." required></textarea>
-                </div>
-
-                <button type="submit" id="submitBtn" class="btn">Invia Richiesta</button>
-                <div id="formStatus" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
-            </form>
+    <h2>Contattaci</h2>
+    <div class="contact-container">
+        
+        <div class="work-hours card">
+            <h3><i class="fas fa-clock"></i> Orari di Apertura</h3>
+            <div class="hours-grid">
+                <p><span>Luned&igrave; - Venerd&igrave;:</span> 14:00 - 21:00</p>
+                <p><span>Sabato:</span> 14:00 - 19:00</p>
+                <p><span>Domenica:</span> <span class="closed">Chiuso</span></p>
+            </div>
         </div>
-    </section>
+
+        <p style="text-align: center; margin: 30px 0;">Invia un messaggio diretto al team tecnico per una consulenza rapida.</p>
+        
+        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
+            <input type="hidden" name="access_key" value="714d09d5-27f2-4f94-a280-f56f8b415457">
+            <input type="hidden" name="from_name" value="NetArmor Web Portal">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Nome Azienda o Referente" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email per la risposta" required>
+            </div>
+            <div class="form-group">
+                <select name="service_interest">
+                    <option value="Monitoraggio SOC">Monitoraggio SOC 24/7</option>
+                    <option value="Assessment">Vulnerability Assessment</option>
+                    <option value="Compliance">GDPR & Compliance</option>
+                    <option value="Altro">Altro / Informazioni</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea name="message" rows="5" placeholder="Descrivi le tue esigenze di sicurezza..." required></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="btn">Invia Richiesta</button>
+            <div id="formStatus" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
+        </form>
+    </div>
+</section>
 
     <footer>
         <div class="footer-content">
@@ -194,7 +201,7 @@
                 }
             })
             .catch(error => {
-                status.innerHTML = "Errore di connessione. Riprova piÃ¹ tardi.";
+                status.innerHTML = "Errore di connessione. Riprova più tardi.";
                 status.style.color = "#ff4444";
             })
             .finally(() => {

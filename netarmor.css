@@ -220,13 +220,12 @@ footer {
 
 /* --- Stile Spot Video --- */
 .video-container {
-    max-width: 850px;
+    max-width: 650px; /* Ridotto da 850px per non essere troppo grande su PC */
     margin: 0 auto;
+    padding: 15px;
     background: rgba(22, 27, 42, 0.4);
-    padding: 25px;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid rgba(0, 212, 255, 0.2);
-    backdrop-filter: blur(10px);
 }
 
 .video-title {
@@ -247,7 +246,10 @@ footer {
 
 .video-wrapper video {
     width: 100%;
-    display: block;
+    max-height: 400px; /* Impedisce al video di diventare troppo alto se il logo è quadrato */
+    object-fit: contain; /* Assicura che il logo quadrato non venga tagliato */
+    background: #000;
+    border-radius: 10px;
 }
 
 /* --- Stile Form di Contatto --- */
@@ -263,6 +265,49 @@ footer {
 
 .form-group {
     margin-bottom: 15px;
+}
+/* --- Stile Orari di Lavoro --- */
+.work-hours {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    max-width: 400px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.work-hours h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.hours-grid p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 5px;
+}
+
+.hours-grid span {
+    font-weight: bold;
+}
+
+.closed {
+    color: #ff4444;
+    text-transform: uppercase;
+}
+
+/* Mobile responsive per il video */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 90% !important;
+    }
 }
 
 .contact-form input, 
