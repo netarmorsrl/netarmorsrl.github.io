@@ -42,10 +42,10 @@
         .close-disclaimer:hover {
             transform: scale(1.2);
         }
-        /* Stile per il numero di telefono */
-        .phone-contact {
-            margin-top: 20px;
-            font-size: 1.2rem;
+        /* Stile per i contatti diretti (Telefono ed Email) */
+        .direct-contact {
+            margin-top: 15px;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -54,12 +54,20 @@
             text-decoration: none;
             transition: 0.3s;
         }
-        .phone-contact i {
-            color: #25D366; /* Verde cornetta */
-            font-size: 1.4rem;
+        .direct-contact i {
+            color: var(--accent); /* Colore azzurro per icone */
+            font-size: 1.2rem;
         }
-        .phone-contact:hover {
+        .direct-contact i.fa-phone-alt {
+            color: #25D366; /* Verde specifico per la cornetta */
+        }
+        .direct-contact:hover {
             color: var(--accent);
+        }
+        .contact-info-group {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
@@ -210,10 +218,17 @@
                     <p><span>Sabato:</span> 14:00 - 19:00</p>
                     <p><span>Domenica:</span> <span class="closed">Chiuso</span></p>
                 </div>
-                <a href="tel:+390801234567" class="phone-contact">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+39 080 123 4567</span>
-                </a>
+                
+                <div class="contact-info-group">
+                    <a href="tel:+390801234567" class="direct-contact">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+39 080 123 4567</span>
+                    </a>
+                    <a href="mailto:netarmorsrl@gmail.com" class="direct-contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>netarmorsrl@gmail.com</span>
+                    </a>
+                </div>
             </div>
 
             <p style="text-align: center; margin: 30px 0;">Invia un messaggio diretto al team tecnico per una consulenza rapida.</p>
