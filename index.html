@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NetArmor Srl | Cyber Security per l'Impresa Moderna</title>
+    
+    <link rel="icon" type="image/png" href="logo.png">
+    
     <link rel="stylesheet" href="netarmor.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
 
     <header>
         <div class="logo">
@@ -19,6 +27,7 @@
             <a href="#brochure">Documenti</a> 
             <a href="#metodo">Metodo</a>
             <a href="#clienti">Clienti</a>
+            <a href="#faq">FAQ</a>
             <a href="#contatti">Contatti</a>
         </nav>
     </header>
@@ -27,6 +36,12 @@
         <h1>Sicurezza Digitale per l&apos;Impresa Moderna</h1>
         <p>Garantiamo protezione informatica su misura con monitoraggio 24/7 e tecnologie di difesa proattiva per assicurare la tua continuita' operativa.</p>
         
+        <div class="hero-stats">
+            <div class="stat-item"><i class="fas fa-shield-alt"></i> <span>Monitoraggio 24/7</span></div>
+            <div class="stat-item"><i class="fas fa-bolt"></i> <span>Difesa Proattiva</span></div>
+            <div class="stat-item"><i class="fas fa-user-check"></i> <span>Esperti Certificati</span></div>
+        </div>
+
         <div class="audio-container">
             <span class="audio-label">Ascolta la nostra presentazione:</span>
             <audio controls>
@@ -111,46 +126,63 @@
         </div>
     </section>
 
-    <section id="contatti">
-    <h2>Contattaci</h2>
-    <div class="contact-container">
-        
-        <div class="work-hours card">
-            <h3><i class="fas fa-clock"></i> Orari di Apertura</h3>
-            <div class="hours-grid">
-                <p><span>Luned&igrave; - Venerd&igrave;:</span> 14:00 - 21:00</p>
-                <p><span>Sabato:</span> 14:00 - 19:00</p>
-                <p><span>Domenica:</span> <span class="closed">Chiuso</span></p>
+    <section id="faq">
+        <h2>Domande Frequenti (FAQ)</h2>
+        <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+            <div class="service-card" style="margin-bottom: 20px;">
+                <p><strong>Come garantite la sicurezza H24?</strong></p>
+                <p>Il nostro SOC (Security Operations Center) utilizza algoritmi di intelligenza artificiale che monitorano i log in tempo reale, allertando i nostri tecnici ad ogni anomalia.</p>
+            </div>
+            <div class="service-card" style="margin-bottom: 20px;">
+                <p><strong>I miei dati sono al sicuro durante l'analisi?</strong></p>
+                <p>Assolutamente si'. Operiamo secondo i piu' alti standard di riservatezza e crittografia, agendo nel pieno rispetto del GDPR.</p>
             </div>
         </div>
+    </section>
 
-        <p style="text-align: center; margin: 30px 0;">Invia un messaggio diretto al team tecnico per una consulenza rapida.</p>
-        
-        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
-            <input type="hidden" name="access_key" value="714d09d5-27f2-4f94-a280-f56f8b415457">
-            <input type="hidden" name="from_name" value="NetArmor Web Portal">
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Nome Azienda o Referente" required>
+    <section id="contatti" class="bg-alt">
+        <h2>Contattaci</h2>
+        <div class="contact-container">
+            
+            <div class="work-hours card">
+                <h3><i class="fas fa-clock"></i> Orari di Apertura</h3>
+                <div class="hours-grid">
+                    <p><span>Luned&igrave; - Venerd&igrave;:</span> 14:00 - 21:00</p>
+                    <p><span>Sabato:</span> 14:00 - 19:00</p>
+                    <p><span>Domenica:</span> <span class="closed">Chiuso</span></p>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Email per la risposta" required>
-            </div>
-            <div class="form-group">
-                <select name="service_interest">
-                    <option value="Monitoraggio SOC">Monitoraggio SOC 24/7</option>
-                    <option value="Assessment">Vulnerability Assessment</option>
-                    <option value="Compliance">GDPR & Compliance</option>
-                    <option value="Altro">Altro / Informazioni</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <textarea name="message" rows="5" placeholder="Descrivi le tue esigenze di sicurezza..." required></textarea>
-            </div>
-            <button type="submit" id="submitBtn" class="btn">Invia Richiesta</button>
-            <div id="formStatus" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
-        </form>
-    </div>
-</section>
+
+            <p style="text-align: center; margin: 30px 0;">Invia un messaggio diretto al team tecnico per una consulenza rapida.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
+                <input type="hidden" name="access_key" value="714d09d5-27f2-4f94-a280-f56f8b415457">
+                <input type="hidden" name="from_name" value="NetArmor Web Portal">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Nome Azienda o Referente" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email per la risposta" required>
+                </div>
+                <div class="form-group">
+                    <select name="service_interest">
+                        <option value="Monitoraggio SOC">Monitoraggio SOC 24/7</option>
+                        <option value="Assessment">Vulnerability Assessment</option>
+                        <option value="Compliance">GDPR & Compliance</option>
+                        <option value="Altro">Altro / Informazioni</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Descrivi le tue esigenze di sicurezza..." required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn">Invia Richiesta</button>
+                <div id="formStatus" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-content">
@@ -159,63 +191,16 @@
             
             <div class="social-links" style="margin-top: 25px;">
                 <p style="margin-bottom: 12px; font-size: 0.9rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase;">Seguici sui nostri canali:</p>
-                
-                <a href="https://www.instagram.com/netarmor_srl" target="_blank" title="Instagram" style="margin: 0 12px; font-size: 1.8rem; color: #fff; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@netarmorsrl" target="_blank" title="TikTok" style="margin: 0 12px; font-size: 1.8rem; color: #fff; transition: 0.3s;"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/netarmor_srl" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@netarmorsrl" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
     </footer>
 
-    <script>
-        const form = document.getElementById('contactForm');
-        const status = document.getElementById('formStatus');
-        const btn = document.getElementById('submitBtn');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            btn.disabled = true;
-            status.innerHTML = "Invio in corso...";
-            status.style.color = "var(--accent)";
-
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let res = await response.json();
-                if (response.status == 200) {
-                    status.innerHTML = "Grazie! Richiesta inviata con successo.";
-                    status.style.color = "#00ff88";
-                    form.reset();
-                } else {
-                    status.innerHTML = "Errore: " + res.message;
-                    status.style.color = "#ff4444";
-                }
-            })
-            .catch(error => {
-                status.innerHTML = "Errore di connessione. Riprova più tardi.";
-                status.style.color = "#ff4444";
-            })
-            .finally(() => {
-                btn.disabled = false;
-            });
-        });
-    </script>
-    
-<div id="social-popup" class="social-popup">
+    <div id="social-popup" class="social-popup">
         <div class="popup-content">
             <button class="close-popup" onclick="closePopup()">&times;</button>
-            <div class="popup-icon">
-                <i class="fab fa-instagram"></i>
-            </div>
+            <div class="popup-icon"><i class="fab fa-instagram"></i></div>
             <div class="popup-text">
                 <p>Seguici su <strong>Instagram</strong>!</p>
                 <span>E' il nostro canale piu' attivo.</span>
@@ -225,7 +210,53 @@
     </div>
 
     <script>
-        // Mostra il popup dopo 3 secondi
+        // Gestione Barra di Progresso
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        };
+
+        // Gestione Invio Modulo Web3Forms
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        const btn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            btn.disabled = true;
+            status.innerHTML = "Inviando il segnale...";
+            status.style.color = "var(--accent)";
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: json
+            })
+            .then(async (response) => {
+                let res = await response.json();
+                if (response.status == 200) {
+                    status.innerHTML = "Successo! Riceverai risposta a breve.";
+                    status.style.color = "#00ff88";
+                    form.reset();
+                } else {
+                    status.innerHTML = "Errore: " + res.message;
+                    status.style.color = "#ff4444";
+                }
+            })
+            .catch(error => {
+                status.innerHTML = "Errore di rete. Riprova più tardi.";
+                status.style.color = "#ff4444";
+            })
+            .finally(() => { btn.disabled = false; });
+        });
+
+        // Gestione Popup Social (Ritardo 3 secondi)
         window.onload = function() {
             setTimeout(function() {
                 document.getElementById('social-popup').classList.add('show');
